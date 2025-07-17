@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>World Emoji Day</title>
+        <link rel="icon" href="https://i.pinimg.com/originals/75/a9/eb/75a9eb85f22bd76462f227257455b02c.gif" type="image/gif">
+        <style>
+            body{
+                background: linear-gradient(to right, #bcab14, #198c23);
+            }
+            input{
+                appearance: none;
+                background-image: url(https://gifdb.com/images/high/sad-disappointed-emoji-fe0odmcpuli6pcbx.gif);
+                background-size: cover;
+                width:100px;
+                height:100px;
+
+            }
+            input:checked{
+                background-image: url(https://i.pinimg.com/originals/94/c8/db/94c8db1324b4bee92a1d42cf2ae209b2.gif);
+                width:100px;
+                height:100px;
+            }
+            label{
+                border:10px dashed rgb(199, 212, 16);
+                padding: 75px;
+                margin: 50px;
+            }
+            @keyframes animation{
+                from{
+                    transform: translateY(0px);
+                    color:aqua;
+                }
+                to{
+                    transform: translateY(500px);
+                    color:blue;
+                }
+            }
+            h1{
+                animation: animation 2s infinite alternate;
+
+            }
+            p{
+                animation: animation 2s infinite alternate;
+                animation-delay: 1s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>🥳😂Happy World Emoji Day!🍾🥳</h1>
+            <p>Today we celebrate the joy and diversity of emojis.</p>
+            <label for="">
+                <input type="checkbox">
+                <span style="font-size: larger; color:aquamarine; font-weight: bolder;">Click here to show your love for emojis!</span>
+            </label>
+        </center>
+    </body>
+</html>
