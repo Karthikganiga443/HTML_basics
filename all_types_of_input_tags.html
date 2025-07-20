@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Al Input Types in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d6d6d6;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            margin: 5px 0 15px 0;
+            padding: 6px;
+            width: 250px;
+            display: block;
+        }
+        input:invalid {
+            border: 2px dashed red;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+
+</style>
+</head>
+<body>
+    <h2>All HTML Input Types</h2>
+    <form>
+        <label>Text:</label>
+        <input class="input-field" type="text" placeholder="Enter text" required>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter password" pattern="{6,12}$" title="6 to 12 alphanumeric characters">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Number:</label>
+        <input type="number" min="1" max="10" placeholder="Enter number">
+
+        <label>Telephone:</label>
+        <input type="tel" placeholder="Enter phone number">
+
+        <label>URL:</label>
+        <input type="url" placeholder="Enter URL">
+
+        <label>Search:</label>
+        <input type="search" placeholder="Search here">
+
+        <label>Date:</label>
+        <input type="date">
+
+        <label>Time:</label>
+        <input type="time">
+
+        <label>Datetime-local:</label>
+        <input type="datetime-local">
+
+        <label>Month:</label>
+        <input type="month">
+
+        <label>Week:</label>
+        <input type="week">
+
+        <label>Checkbox:</label>
+        <input type="checkbox"> I agree<br>
+
+        <label>Radio:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br>
+
+        <label>Range:</label>
+        <input type="range" min="0" max="100" value="100">
+
+        <label>Color:</label>
+        <input type="color">
+
+        <label>File:</label>
+        <input type="file">
+
+        <label>Hidden:</label>
+        <input type="hidden" value="hiddenValue">
+
+        <label>Image (submit as image):</label>
+        <input type="image" src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="Submit" width="10" height="100">
+
+        <label>Submit:</label>
+        <input type="submit" value="Submit Form" onclick="alert('Form submitted!')">
+
+        <label>Reset:</label>
+        <input type="reset" value="Reset Form" onclick="alert('Form reset!')">
+
+        <label>Button:</label>
+        <input type="button" value="Click Me" onclick="alert('Button clicked!')">
+    </form>
+</body>
+</html>

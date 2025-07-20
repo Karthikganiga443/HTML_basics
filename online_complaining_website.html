@@ -1,0 +1,66 @@
+<html>
+    <head><title>Online_Complaining_System</title></head>
+    <style>
+        input{
+            margin-top: 10px;
+            display: flex;
+        }
+        input:invalid {
+            border: 2px dashed red;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+        body{
+            background: radial-gradient(circle, red, blue);
+        }
+        form{
+            background:linear-gradient(to right, red,blue);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        @keyframes anim{
+            from{
+                transform: translateX(-100px);
+            }
+            to{
+                transform: translateX(100px);
+            }
+        }
+        h1{
+            animation: anim 2s infinite alternate;
+        }
+    </style>
+    <body>
+        <h1 style="text-align: center;"><mark style="background-color: rgba(255, 0, 0, 0.219);">Welcome To Online Complaining System</mark></h1>
+        <hr>
+        <form action="" style="border:0px solid black; padding:20px; width:fit-content; margin:auto; display: block; align-items: center; font-weight: bolder">
+            <h2>Enter the details</h2>
+            <label for="">Name:</label>
+            <input type="text" placeholder="Enter Your Name" required>
+            <br>
+            <label for="">Email:</label>
+            <input type="email" placeholder="Enter your Email" required>
+            <br>
+            <label for="">Password: </label>
+            <input type="password" placeholder="Enter the correct password" required>
+            <br>
+            <label for="">Phone Number: </label>
+            <input type="tel" placeholder="Enter your phone number" required>
+            <br>
+            <label for="">Date and Time of order of creation</label>
+            <input type="datetime-local" required>
+            <br>
+            <label for="">Order Item Image</label>
+            <input type="file" accept="image/*" required>
+            <br>
+            <label for="">Complaint</label>
+            <input type="text" placeholder="You can Specify the Issue Here" required style="width:200">
+            <br>
+            <input type="submit" value="Submit" onclick="alert('Form submitted successfully!')"
+            style="margin: auto; border-color: black;">
+            <br>
+            <input type="reset" value="Reset" onclick="alert('Form reset successfully!')" style="margin: auto;">
+        </form>
+    </body>
+</html>
