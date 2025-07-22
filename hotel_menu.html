@@ -60,15 +60,28 @@
                 background-color: aqua;
             }
         }
+        @keyframes anima{
+            from{
+                transform: TranslateX(0px);
+                background-color: rgb(9, 255, 0);
+            }
+            to{
+                transform: TranslateX(600px);
+                background-color: aqua;
+            }
+        }
         h1{
             animation: anim 2s infinite alternate;
             width: fit-content;
+        }
+        .thank{
+            animation: anima 3s infinite alternate;;
         }
     </style>
 </head>
 <body>
     <center>
-        <h1>Hotel Menu</h1>
+        <h1>Hotel Sagar</h1>
         <hr>
     </center>
     <div class="menu1">
@@ -171,4 +184,5 @@
         <h3>For More Info Contact the owner : <i class="fa-solid fa-address-card"></i> Prabhu </h3>
         <p style="margin: 0; text-align: right; font-weight: bolder;">+91 8618878965</p>
     </div>
+    <h3 class="thank" style="border: 2px solid black; width:fit-content; background-color:aquamarine;font-weight:900px;border-radius: 5px;;">Thank You For Visiting We Are Happy To Serve You!!!😊😍😄</h3>
 </body>
