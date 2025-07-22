@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress and Meter</title>
+
+</head>
+<body>
+    <h1 style="text-align: center;">Progress tag</h1>
+    <div class="class1" style=" display:flex; justify-content: center;">
+        <progress min="0" max= "100" value="0" style="accent-color: green;" id="prog"></progress>
+        <small id="result1">00</small>
+    </div>
+    <script>
+        var d=document.getElementById("prog");
+        var res=document.getElementById("result1");
+        function pro(){
+            d.value=d.value+1;
+            res.innerText=d.value;
+        }
+        setInterval("pro()",500)
+    </script>
+    <hr>
+    <h1 style="text-align: center;">meter bar</h1>
+    <div class="class2" style=" display:flex; justify-content: center;">
+        <meter value="0" min="0" max="100" low="20" high="80" style="width: 150px;
+        height: 75px; transform: rotate(-90deg); margin-top: 50px;" id="meter"></meter>
+        <small id="result2">00</small>
+    </div>
+    <script>
+        var d1=document.getElementById("meter");
+        var res1=document.getElementById("result2");
+        function incre(){
+            d1.value=d1.value+1;
+            if (d1.value>80){
+                res1.innerText=d1.value+"%  😡";
+            }
+            else if(d1.value > 20){
+                res1.innerText=d1.value+"%  😍";
+            }
+            else if (d1.value<20){
+                res1.innerText=d1.value+"%  😔";
+            }
+        }
+        setInterval("incre()",500)
+
+    </script>
+
+
+
+</body>
+</html>
