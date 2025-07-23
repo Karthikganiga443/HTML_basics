@@ -175,10 +175,10 @@
             z.fillRect(150,245,75,30);
             z.fillRect(110,245,35,30);
             z.fillRect(310,245,35,30);
-            z.fillRect(110,280,75,30);
-            z.fillRect(270,280,75,30);
+            z.fillRect(110,280,75,35);
+            z.fillRect(270,280,75,35);
             z.fillRect(230,245,75,30);
-            z.fillRect(190,280,75,30);
+            z.fillRect(190,280,75,35);
             z.fillRect(150,320,75,30);
             z.fillRect(230,320,75,30);
             z.fillRect(110,320,35,30);
@@ -194,7 +194,25 @@
         z.beginPath();
         z.fillStyle="red";
         z.font=("40px Times New Roman");
-        z.fillText("House",100,500)
+        z.fillText("House",100,500);
+        z.closePath();
+        z.beginPath();
+        z.strokeStyle="gray"
+        z.lineWidth=10
+        z.moveTo(240,50);
+        z.lineTo(140,200);
+        z.moveTo(290,50);
+        z.lineTo(190,200);
+        z.moveTo(340,52);
+        z.lineTo(245,200);
+        z.moveTo(400,52);
+        z.lineTo(300,200);
+        z.moveTo(174,90);
+        z.lineTo(420,90);
+        z.moveTo(138,150);
+        z.lineTo(380,150);
+        z.stroke();
+
     </script>
 </body>
 </html>
