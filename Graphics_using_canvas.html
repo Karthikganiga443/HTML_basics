@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Canvas - multiple Graphics</h1>
+    <hr>
+    <canvas id="can" width="600" height="500" style="border: 1px solid black;"></canvas>
+    <script>
+        var d=document.getElementById("can").getContext("2d");
+        d.beginPath();
+        d.fillStyle="black";
+        d.fillRect(100,100,300,200);
+        d.closePath();
+        d.beginPath();
+        d.fillStyle="gray";
+        d.fillRect(115,115,270,170);
+        d.closePath();
+        d.moveTo(101,300);
+        d.lineTo(200,450);
+        d.lineTo(500,450);
+        d.lineTo(400,300);
+        d.moveTo(150,320);
+        d.lineTo(380,320)
+        d.lineTo(415,370);
+        d.lineTo(185,370);
+        d.lineTo(150,320);
+        d.moveTo(260,390);
+        d.lineTo(370,390)
+        d.lineTo(399,430);
+        d.lineTo(290,430);
+        d.lineTo(260,390);
+        d.moveTo(282,420);
+        d.lineTo(393,420);
+        d.moveTo(345,430);
+        d.lineTo(333,420);
+        d.moveTo(165,328);
+        d.lineTo(190,362);
+        d.lineTo(398,362);
+        d.lineTo(375,328);
+        d.lineTo(165,328)
+        d.stroke();
+        d.beginPath();
+        d.font=("35px Times New Roman");
+        d.fillText("KeyBoard",210,355);
+        d.font=("20px Times New Roman");
+        d.fillText("Touchpad",290,410);
+        d.font=("40px Times New Roman");
+        d.fillText("LAPTOP",190,50);
+        d.closePath();
+    </script>
+    <hr>
+    <canvas id="ca" width="600" height="400" style="border: 1px solid black;"></canvas>
+    <script>
+        var q=document.getElementById("ca").getContext("2d");
+        q.beginPath();
+        q.fillStyle="red";
+        q.fillRect(150,100,415,150);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="gray";
+        q.fillRect(170,120,50,50);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="gray";
+        q.fillRect(250,120,50,50);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="gray";
+        q.fillRect(330,120,50,50);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="gray";
+        q.fillRect(410,120,50,50);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="gray";
+        q.fillRect(490,120,50,50);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.fillRect(160,185,390,50);
+        q.closePath();
+        q.fillStyle="red"
+        q.font=("40px Times News Roman");
+        q.fillText("KSRTC",300,220);
+        q.beginPath();
+        q.fillStyle="black";
+        q.arc(250,265,45,0,2*3.14);
+        q.fill();
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.arc(450,265,45,0,2*3.14);
+        q.fill();
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.fillRect(40,308,550,10)
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.fillRect(150,100,415,5)
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.fillRect(50,80,10,235);
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="black";
+        q.fillRect(30,30,50,145)
+        q.closePath();
+         q.beginPath();
+        q.fillStyle="red";
+        q.arc(55,60,15,0,2*3.14);
+        q.fill();
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="yellow";
+        q.arc(55,100,15,0,2*3.14);
+        q.fill();
+        q.closePath();
+        q.beginPath();
+        q.fillStyle="lightgreen";
+        q.arc(55,140,15,0,2*3.14);
+        q.fill();
+        q.closePath();
+        q.fillStyle="red"
+        q.font=("40px Times New Roman");
+        q.fillText("BUS",300,50);
+    </script>
+    <hr>
+    <canvas id="house" width="600" height="600" style="border: 1px solid black;"></canvas>
+    <script>
+        let z=document.getElementById("house").getContext("2d");
+        z.beginPath();
+            z.strokeStyle="red";
+            z.moveTo(100,200);
+            z.lineTo(350,200);
+            z.lineTo(350,400);
+            z.lineTo(100,400);
+            z.lineTo(100,200);
+            z.lineTo(200,50);
+            z.lineTo(450,50);
+            z.lineTo(350,200);
+            z.lineTo(550,200);
+            z.lineTo(450,50);
+            z.moveTo(550,200);
+            z.lineTo(550,400);
+            z.lineTo(350,400);
+            z.moveTo(400,400);
+            z.lineTo(400,250);
+            z.lineTo(500,250);
+            z.lineTo(500,400);
+            z.stroke();
+        z.closePath();
+        z.beginPath();
+            z.fillStyle="gray";
+            z.arc(450,145,40,0,6.28);
+            z.fill();
+            z.beginPath();
+            z.fillStyle="brown"
+            z.arc(485,330,8,0,6.25);
+            z.fill();
+            z.closePath();
+        z.closePath();
+        z.beginPath();
+            z.fillStyle="brown";
+            z.fillRect(110,210,75,30);
+            z.fillRect(190,210,75,30);
+            z.fillRect(270,210,75,30);
+            z.fillRect(150,245,75,30);
+            z.fillRect(110,245,35,30);
+            z.fillRect(310,245,35,30);
+            z.fillRect(110,280,75,30);
+            z.fillRect(270,280,75,30);
+            z.fillRect(230,245,75,30);
+            z.fillRect(190,280,75,30);
+            z.fillRect(150,320,75,30);
+            z.fillRect(230,320,75,30);
+            z.fillRect(110,320,35,30);
+            z.fillRect(310,320,35,30);
+            z.fillRect(267,355,75,30);
+            z.fillRect(188,355,75,30);
+            z.fillRect(110,355,75,30);
+            z.fillStyle="gray";
+            z.fillRect(415,400,75,20);
+            z.fillRect(430,425,75,20);
+            z.fillRect(450,450,75,20);
+        z.closePath();
+        z.beginPath();
+        z.fillStyle="red";
+        z.font=("40px Times New Roman");
+        z.fillText("House",100,500)
+    </script>
+</body>
+</html>
