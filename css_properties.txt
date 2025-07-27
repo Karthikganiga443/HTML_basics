@@ -1,0 +1,171 @@
+1. Text properties:
+
+color - applies color to the text
+text-align - left, center, right
+text-decoration - adds decoration to the text
+text transform - controls capitalization
+text-indent - indents the first line of the text
+letter-spacing - adds spaces b/w the letters
+word-spacing - adds spaces b/w the words
+line-height - sets the height b/w the lines or text
+white-space - controls how white spaces is handled
+direction - sets text direction like from left to right or right to left
+text-overflow - defines how overflowed text is shown
+overflow-wrap or word-wrap - breaks long words to fit
+text-shadow - add shadows to text
+writing-mode - changes text writing directions like to vertical or horizontal 
+
+2. Font properties:
+
+font-family - sets the fonts type
+font-size -  sets the fonts size
+font-weight - sets the thickness of the fonts
+font-style - sets style to fonts like bold or italic
+font-variant - enables small-caps effect
+font-stretch - expands or condenses the font
+font - Shorthand for font-style, font-weight, font-size, line-height, and font-family
+
+example for text and font properties : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text and Font Properties Example</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .example1 {
+      color: red;
+      text-align: left;
+      text-decoration: underline;
+      text-transform: uppercase;
+      text-indent: 50px;
+      letter-spacing: 5px;
+      word-spacing: 10px;
+      line-height: 1.2;
+      white-space:normal;
+      direction: ltr;
+      text-overflow: clip;
+      overflow-wrap: break-word;
+      text-shadow: 1px 1px 2px black;
+      writing-mode: horizontal-tb;
+      font: italic bold 20px/1.5 'Georgia', serif;
+    }
+
+    .example2 {
+      color: blue;
+      text-align: center;
+      text-decoration: overline;
+      text-transform: lowercase;
+      text-indent: 30px;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      line-height: 2;
+      white-space: nowrap;
+      direction: rtl;
+      text-overflow: ellipsis;
+      overflow-wrap: anywhere;
+      text-shadow: 2px 2px 4px gray;
+      writing-mode: vertical-rl;
+      font: oblique 600 16px/2 'Courier New', monospace;
+    }
+
+    .example3 {
+      color: green;
+      text-align: right;
+      text-decoration: line-through;
+      text-transform: capitalize;
+      text-indent: 0px;
+      letter-spacing: normal;
+      word-spacing: normal;
+      line-height: normal;
+      white-space: pre;
+      direction: ltr;
+      text-overflow: clip;
+      overflow-wrap: normal;
+      text-shadow: none;
+      writing-mode: vertical-lr;
+      font: normal normal 18px/1.4 'Verdana', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Example 1: LTR, Uppercase, Red, Horizontal</h2>
+  <p class="example1">
+    this is the first example showing all text and font properties with different values.
+  </p>
+
+  <h2>Example 2: RTL, Lowercase, Blue, Vertical</h2>
+  <p class="example2">
+    THIS IS THE SECOND EXAMPLE SHOWING ALL TEXT AND FONT PROPERTIES WITH DIFFERENT VALUES.
+  </p>
+
+  <h2>Example 3: Capitalized, Green, Line-Through, Preformatted</h2>
+  <p class="example3">
+    this   is   the   third   example
+    showing   all   text   and   font   properties
+    with   different   values.
+  </p>
+
+</body>
+</html>
+
+3. Border model properties:
+
+border - sets the border - width, type of border, color
+padding - space inside the border - top, right, bottom, left
+margin - space outside the border - top, right, bottom, left
+height - height of the border
+border-radius - gives rounded corners
+box-shadow - gives shadows to the box
+
+4. background properties :
+
+background-color - gives color to background
+background-image: url("path") - displays image in background
+background-size - defines the size of the background
+background-repeat - if u want to repeat the images
+
+eg : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border and Background Example</title>
+  <style>
+    .card {
+      height: 200px;
+      width: 300px;
+      margin: 40px;
+      padding: 20px;
+      border: 5px solid #4CAF50;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+      background-color: #e0f7fa;
+      background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Stylish Box</h2>
+    <p>This box uses border, padding, margin, rounded corners, shadow, and a patterned background.</p>
+  </div>
+
+</body>
+</html>
+
+5. 

@@ -1,0 +1,23 @@
+for login:
+
+$ git config --global user.name "Karthikganiga443"
+$ git config --global user.email "karthikganiga443@gmail.com"
+$ git config --global user.password "Karthik90711"
+
+to upload the project first time:
+
+git init  (to initialize)
+git add    (add ALL THE ELEMENTS)
+git commit -m "any message"  (saving all the files added)
+git remote add origin https://github.com/Karthikganiga443/test-camera.git
+git push -u origin master
+
+updating the existing repo:
+
+git add .
+git commit -u "msg"
+git push -u origin master	
+
+to get or access the project or cloning the project
+
+git clone https://github.com/Karthikganiga443/test-camera.git
