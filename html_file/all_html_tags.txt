@@ -153,4 +153,4 @@ link tags :
 1. link the external css - <link rel="stylesheet" href="style.css">
 2. to display the icon - <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-
+about - definition tag, select tag, option tag, option grp tag, datalist tag
