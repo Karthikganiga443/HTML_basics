@@ -39,118 +39,93 @@ Formatting tags:
 <div id="" class="" style="" title=""> </div>
 <ul type=""> <li> </li> </ul> - unordered list
 <ol> <li> </li> </ol> - ordered list
-
+about - definition tag, select tag, option tag, option grp tag, datalist tag
+<dfn> </dfn> -  definition tag 
+<select> </select> - select tag (to select the options)
+<optiongrp> </optiongrp> - options group tag (it will highlight the main content in the options)
+<option> </option> - option tag ( helps to display the options )
 eg: 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML Tags Example</title>
+    <meta charset="UTF-8">
+    <title>HTML Tags Example</title>
 </head>
 <body>
 
-  <!-- Headings -->
-  <h1>This is Heading H1</h1>
-  <h2>This is Heading H2</h2>
-  <h3>This is Heading H3</h3>
-  <h4>This is Heading H4</h4>
-  <h5>This is Heading H5</h5>
-  <h6>This is Heading H6</h6>
+    <!-- Heading Tags -->
+    <h1>Main Heading (h1)</h1>
+    <h2>Subheading (h2)</h2>
+    <h3>Subheading (h3)</h3>
+    <h4>Subheading (h4)</h4>
+    <h5>Subheading (h5)</h5>
+    <h6>Smallest Heading (h6)</h6>
 
-  <!-- Paragraph -->
-  <p>This is a paragraph tag that contains several inline formatting examples.</p>
+    <!-- Paragraph and Formatting -->
+    <p>This is a <b>bold</b> word and a <strong>strong</strong> word.</p>
+    <p>This is an <i>italic</i> word and an <em>emphasized</em> word.</p>
+    <p>This text is <u>underlined</u>.</p>
+    <p>This is a <mark>highlighted sentence</mark>.</p>
+    <p>This is a <small>smaller text</small>.</p>
+    <p>This word is <del>deleted</del> and this is <ins>inserted</ins>.</p>
+    <p>Water formula: H<sub>2</sub>O &nbsp;&nbsp; E = mc<sup>2</sup></p>
 
-  <!-- Bold / Strong -->
-  <b>This is bold text using &lt;b&gt;</b><br>
-  <strong>This is important text using &lt;strong&gt;</strong><br>
+    <!-- Line Break and Horizontal Rule -->
+    <p>This is line one.<br>This is line two.</p>
+    <hr>
 
-  <!-- Italic / Em -->
-  <i>This is italic text using &lt;i&gt;</i><br>
-  <em>This is emphasized text using &lt;em&gt;</em><br>
+    <!-- Blockquote and Preformatted Text -->
+    <blockquote>This is a quote from someone important.</blockquote>
+    <pre>
+function hello() {
+    console.log("Hello World!");
+}
+    </pre>
 
-  <!-- Underline -->
-  <u>This text is underlined using &lt;u&gt;</u><br>
+    <!-- Abbreviation, Citation, and Definition -->
+    <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard for webpages.</p>
+    <p><cite>The Ramayana</cite> is an epic poem.</p>
+    <p><dfn>Internet</dfn> is a global network of computers.</p>
 
-  <!-- Mark (Highlight) -->
-  <mark>This sentence is highlighted using &lt;mark&gt;</mark><br>
+    <!-- Lists -->
+    <h3>Unordered List</h3>
+    <ul type="square">
+        <li>Item One</li>
+        <li>Item Two</li>
+    </ul>
 
-  <!-- Small Text -->
-  <small>This is small text using &lt;small&gt;</small><br>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+    </ol>
 
-  <!-- Deleted / Inserted Text -->
-  <del>This is deleted text using &lt;del&gt;</del><br>
-  <ins>This is inserted text using &lt;ins&gt;</ins><br>
+    <!-- Form Input: Select, Option, Optgroup, Datalist -->
+    <h3>Choose your favorite fruit:</h3>
+    <select name="fruits">
+        <optgroup label="Citrus">
+            <option>Lemon</option>
+            <option>Orange</option>
+        </optgroup>
+        <optgroup label="Berries">
+            <option>Strawberry</option>
+            <option>Blueberry</option>
+        </optgroup>
+    </select>
 
-  <!-- Subscript / Superscript -->
-  H<sub>2</sub>O (subscript for water)<br>
-  E = mc<sup>2</sup> (superscript for energy formula)<br>
+    <h3>Search Country (with datalist):</h3>
+    <input list="countries" name="country">
+    <datalist id="countries">
+        <option value="India">
+        <option value="USA">
+        <option value="Germany">
+    </datalist>
 
-  <!-- Line Break -->
-  This is one line.<br>
-  This is after a line break.<br><br>
-
-  <!-- Horizontal Rule -->
-  <hr>
-
-  <!-- Blockquote -->
-  <blockquote>
-    “The best way to get started is to quit talking and begin doing.” – Walt Disney
-  </blockquote>
-
-  <!-- Preformatted Text -->
-  <pre>
-Line 1
-    Line 2 (indented)
-Line 3
-  </pre>
-
-  <!-- Abbreviation -->
-  <p>The <abbr title="World Health Organization">WHO</abbr> was established in 1948.</p>
-
-  <!-- Cite -->
-  <p><cite>The Ramayana</cite> is a famous ancient Indian epic.</p>
-
-  <!-- Div with attributes -->
-  <div id="container" class="box highlight" style="border: 2px solid black; padding: 10px;" title="Main Div">
-    This is a styled <b>&lt;div&gt;</b> container with id, class, style, and title attributes.
-  </div>
-
-  <br><br>
-
-  <!-- Unordered List -->
-  <ul type="square">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-  </ul>
-
-  <!-- Ordered List -->
-  <ol>
-    <li>Wake up</li>
-    <li>Brush teeth</li>
-    <li>Eat breakfast</li>
-  </ol>
+    <!-- Div with attributes -->
+    <div id="main" class="container" style="color:blue;" title="Main container">
+        <p>This is content inside a div.</p>
+    </div>
 
 </body>
 </html>
-
-anchor tags:
-
-<a href="">displays content</a> -  basic syntax
-
-types of links in anchor tags:
-
-1. External link : <a href="other webpage link" target="_blank">display content</a> - Links to another website (Opens link in new browser tab)
-2. internal link : <a href="about.html">About Us</a> - Links to a page within the same website
-3. I-page link : <a href="#contact">Go to Contact</a> (use with <div id="contact">) - Jumps to a section within the same page
-4. Email link : <a href="@gmail.com">name</a> 
-5. phone link : <a href="+91 7789654123>phone numnber</a>
-6. Download link : <a href="file.pdf" download>download pdf</a>
-
-link tags : 
-
-1. link the external css - <link rel="stylesheet" href="style.css">
-2. to display the icon - <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-about - definition tag, select tag, option tag, option grp tag, datalist tag
