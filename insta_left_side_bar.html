@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Instagram</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" type="images/jpg">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        header{
+            h1{
+                text-align: center;
+            }
+        }
+        main{
+            display: flex;
+        }
+        section{
+            background-color: aqua;
+            text-align: center;
+            height: 100vh;
+            width:1250px;
+            padding: 10px 10px 10px 0px;
+            margin: 10px 10px 10px 0px;
+        }
+        main aside{
+            position: sticky;
+            top:0%;
+            background-color: white; 
+            height: 100vh;
+            border-right: 3px solid darkgray;
+            h2{
+                padding: 35px 55px 30px 15px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            ul{
+                padding:0px;
+                list-style-type:none;
+                li{
+                    word-spacing: 10px;
+                    font-size: 20px;
+                    padding: 10px 60px 10px 10px;
+                    margin:10px;
+                    border:0px solid black;
+                    justify-items: center;
+                    border-radius: 10px
+                };
+                a{
+                    text-decoration: none;
+                    color: black;
+
+                }
+                li:hover{
+                    background-color: lightgrey;
+                }
+                
+            }       
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Webpage</h1>
+    </header>
+    <main>
+        <aside>
+            <h2>Instagram</h2>
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#search"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                <li><a href="#explore"><i class="fa-regular fa-compass"></i> Explore</a></li>
+                <li><a href="#reels"> <i class="fa-solid fa-clapperboard"></i> Reels</a></li>
+                <li><a href="#messages"><i class="fa-regular fa-message"></i> Messages</a></li>
+                <li><a href="#notifications"> <i class="fa-regular fa-heart"></i> Notifications</a></li>
+                <li><a href="#create"> <i class="fa-solid fa-plus"></i> Create</a></li>
+                <li><img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="" width="30px" height="30" style="border-radius: 50px;"><a href="#profile"> Profile</a></li>
+            </ul>
+        </aside>
+        <div><section id="home"><h1>Home</h1></section>
+        <section id="search"><h1>Search</h1></section>
+        <section id="explore"><h1>Explore</h1></section>
+        <section id="reels"><h1>Reels</h1></section>
+        <section id="messages"><h1>Messages</h1></section>
+        <section id="notifications"><h1>Notifications</h1></section>
+        <section id="create"><h1>Create</h1></section>
+        <section id="profile"><h1>Profile</h1></section></div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
