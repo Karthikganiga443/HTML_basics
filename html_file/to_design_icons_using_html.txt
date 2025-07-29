@@ -1,0 +1,6 @@
+There are two methods to design the icons 
+1.using Scalable vector graphics 
+2.using canvas (we use js)
+
+SVG : 
+

@@ -129,3 +129,24 @@ function hello() {
 
 </body>
 </html>
+
+In HTML 5 there are semantic tags ( which give meaning to the tag) like,
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> </title>
+		<metadata>
+		<link>
+		<style> internal CSS </style>
+		<script> JS </script>
+	</head>
+	<body>
+		<header> heading (beginning) <nav> used to provide any links </nav> </header>
+		<main> main content 
+			<aside> used to create side bars </aside>
+			<section> content in a particular section </section>  </main>
+		<footer> footer (end) </footer>
+	</body>
+</html>
+
