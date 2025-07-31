@@ -10,25 +10,51 @@
             margin:0;
             padding:0;
         }
-        form{
-            margin: 100px 10px 10px 500px;
+        .container{
+            display: flex;
+            height:100vh;
+        }
+        .form1{
+            flex:1;
+
+        }
+        .form2{
+            flex:1;
+            header{
+                display: flex;
+                justify-content: end;
+
+            }
         }
         button{
-            width: 385px;
+            width: 200px;
             height: 50px;;
             margin:10px 10px 10px 0px;
+        }
+        #preview{
+            padding:10px;
+            
         }
     </style>
 </head>
 <body>
    <section class="container">
-     <form action="">
-        <textarea name="Type" id="text" rows="10" cols="50"></textarea> <br>
-        <button type="button" onclick="createpdf()">Download PDF</button>
+     <form action="" class="form1">
+        <textarea name="Type" id="text" rows="40" cols="100"></textarea> <br>
+    </form>
+    <form action="" class="form2">
+        <header><button type="button" onclick="createpdf()">Download PDF</button></header>
+        <div id="preview"></div>
     </form>
    </section>
 <script>
+    const preview=document.getElementById("preview")
     const texttag=document.getElementById("text");
+    texttag.onchange=function(){
+        preview.innerText=texttag.value;
+
+
+    }
     function createpdf(){
         const {jsPDF}=window.jspdf;
         const pdf=new jsPDF;
