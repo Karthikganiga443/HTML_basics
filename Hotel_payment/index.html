@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Restaurant</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(241, 238, 233);
+    }
+    header{
+        h1,h2,small{
+            padding:10px;
+        }
+    }
+
+    .sec {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    .sec1 input{
+        margin: 5px;
+        height: 30px;
+        width: 200px;
+        padding: 2px;
+        border-radius: 5px;
+    }
+    .sec1 button{
+        margin: 10px 10px 10px 0px;
+        padding:10px;
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+    }
+    button:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .sec .sec1 {
+        margin: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .sec .sec2 {
+        
+        margin: 10px 50px 0px 10px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+
+    /* NEW: style to align label text left and checkbox right */
+    .sec2 label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+    }
+    .sec2 .order{
+        display: block;
+        margin: auto;
+    }
+    #price {
+    margin: auto;
+    padding: 10px;
+    background-color: rgba(238, 232, 117, 0.47);
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    button{
+        padding:5px;
+        background-color: greenyellow;
+        border-radius: 5px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <center>
+        <header>
+            <h1>Welcome To French Restaurant</h1>
+            <small><big>We are happy to Serve You!!!</big></small>
+        <h2>Please Fill The Details and Select Your Dish</h2>
+        </header>
+        
+    </center>
+    <section class="sec">
+        <section class="sec1">
+            <label>Name: <input type="text" placeholder="Enter Your Name"> </label>
+            <label>Phone Number: <input type="tel" placeholder="Enter Your Phone Number"></label>
+            
+            <button value="button" onclick="total()">Submit</button>
+        </section>
+        <section class="sec2">
+            <label class="order"><strong>Order-Items</strong></label>
+<hr>
+<label ><strong>South-Indian</strong></label>
+<hr>
+
+<label>Idli - 40rps <input type="checkbox" value="40"></label>
+<label>Dosa - 50rps <input type="checkbox" value="50"></label>
+<label>Vada - 30rps <input type="checkbox" value="30"></label>
+<label>Uttapam - 60rps <input type="checkbox" value="60"></label>
+<label>Pongal - 55rps <input type="checkbox" value="55"></label>
+
+<hr>
+<label><strong>North-Indian</strong></label>
+<hr>
+
+<label>Chapati - 40rps <input type="checkbox" value="40"></label>
+<label>Paratha - 50rps <input type="checkbox" value="50"></label>
+<label>Paneer Butter Masala - 120rps <input type="checkbox" value="120"></label>
+<label>Dal Fry - 80rps <input type="checkbox" value="80"></label>
+<label>Butter Naan - 35rps <input type="checkbox" value="35"></label>
+
+<hr>
+<label><strong>Chinese</strong></label>
+<hr>
+
+<label>Fried Rice - 90rps <input type="checkbox" value="90"></label>
+<label>Gobi Manchurian - 80rps <input type="checkbox" value="80"></label>
+<label>Chilli Paneer - 100rps <input type="checkbox" value="100"></label>
+<label>Chicken 65 - 120rps <input type="checkbox" value="120"></label>
+<label>Veg Biryani - 100rps <input type="checkbox" value="100"></label>
+
+<hr>
+<label><strong>Italian</strong></label>
+<hr>
+
+<label>Pizza - 150rps <input type="checkbox" value="150"></label>
+<label>Pasta - 100rps <input type="checkbox" value="100"></label>
+<label> Carbonara - 120rps <input type="checkbox" value="120"></label>
+<label>Arancini - 150rps <input type="checkbox" value="150"></label>
+        </section>
+         
+    </section>
+    <dialog id="price">
+        <h1>Total Price : </h1>
+        <h2 id="totalprice"></h2>
+        <img src="https://play-lh.googleusercontent.com/lomBq_jOClZ5skh0ELcMx4HMHAMW802kp9Z02_A84JevajkqD87P48--is1rEVPfzGVf" alt="QR" width="150px" height="150px">
+        <br>
+        <button  value="button" onclick="paymentdone()">Confirm</button>
+    </dialog>
+    <dialog id="payment">
+        <br>
+        <button onclick="popupclose()">Confirm</button>
+    </dialog>
+    <script>
+        var price=document.getElementById("price");
+        var paymentdoing=document.getElementById("payment");
+        function total(){
+            price.showModal();
+        }
+        function paymentdone(){
+            price.close();
+            paymentdoing.showModal();
+        }
+        function popupclose(){
+            paymentdoing.close();
+        }
+    </script>
+</body>
+
+</html>
