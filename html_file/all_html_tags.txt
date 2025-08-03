@@ -39,93 +39,180 @@ Formatting tags:
 <div id="" class="" style="" title=""> </div>
 <ul type=""> <li> </li> </ul> - unordered list
 <ol> <li> </li> </ol> - ordered list
-about - definition tag, select tag, option tag, option grp tag, datalist tag
 <dfn> </dfn> -  definition tag 
 <select> </select> - select tag (to select the options)
+<datalist> </datalist> - to recommend any keywords 
 <optiongrp> </optiongrp> - options group tag (it will highlight the main content in the options)
 <option> </option> - option tag ( helps to display the options )
+<pre> display the content as it is like spaces line breaks etc.<code> to display the code </code> </pre>
+<details> <summary> visible content </summary> <p> if u click the button it will display the content </p> </details>
+<big> letter size slightly bigger than para </big>
+<marquee direction scrollamount behavior loop bgcolor> create scrolling text or images </marquee>
+<table>
+  <tr>
+    <th>Heading 1</th>
+    <th>Heading 2</th>
+  </tr>
+  <tr>
+    <td>Row 1, Col 1</td>
+    <td>Row 1, Col 2</td>
+  </tr>
+  <tr>
+    <td>Row 2, Col 1</td>
+    <td>Row 2, Col 2</td>
+  </tr>
+</table>  (tr - table row, th - table header cell, td - table data cell, caption - adds caption to the table, thread - group header content, tbody - groups body content, tfoot - group footer content)
+
 eg: 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>HTML Tags Example</title>
+  <meta charset="UTF-8">
+  <title>HTML Tags Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Heading Tags -->
-    <h1>Main Heading (h1)</h1>
-    <h2>Subheading (h2)</h2>
-    <h3>Subheading (h3)</h3>
-    <h4>Subheading (h4)</h4>
-    <h5>Subheading (h5)</h5>
-    <h6>Smallest Heading (h6)</h6>
+  <!-- Headings -->
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
 
-    <!-- Paragraph and Formatting -->
-    <p>This is a <b>bold</b> word and a <strong>strong</strong> word.</p>
-    <p>This is an <i>italic</i> word and an <em>emphasized</em> word.</p>
-    <p>This text is <u>underlined</u>.</p>
-    <p>This is a <mark>highlighted sentence</mark>.</p>
-    <p>This is a <small>smaller text</small>.</p>
-    <p>This word is <del>deleted</del> and this is <ins>inserted</ins>.</p>
-    <p>Water formula: H<sub>2</sub>O &nbsp;&nbsp; E = mc<sup>2</sup></p>
+  <!-- Paragraph and text styles -->
+  <p>This is a normal paragraph with some <b>bold</b> and <strong>strong</strong> text, as well as <i>italic</i> and <em>emphasized</em> text.</p>
+  <p>This text is <u>underlined</u>, <mark>highlighted</mark>, and <small>small-sized</small>.</p>
+  <p>This text is <del>deleted</del> and <ins>inserted</ins>.</p>
+  <p>H<sub>2</sub>O and E = mc<sup>2</sup></p>
 
-    <!-- Line Break and Horizontal Rule -->
-    <p>This is line one.<br>This is line two.</p>
-    <hr>
+  <!-- Line break and horizontal rule -->
+  <p>First line<br>Second line</p>
+  <hr>
 
-    <!-- Blockquote and Preformatted Text -->
-    <blockquote>This is a quote from someone important.</blockquote>
-    <pre>
-function hello() {
-    console.log("Hello World!");
+  <!-- Quoted section and preformatted text -->
+  <blockquote>
+    "The best way to learn HTML is to practice it regularly."
+  </blockquote>
+
+  <pre>
+Line one    with spaces
+    Line two indented
+  </pre>
+
+  <!-- Abbreviation and citation -->
+  <p><abbr title="World Health Organization">WHO</abbr> is an international body.</p>
+  <p><cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>
+
+  <!-- Definition tag -->
+  <p><dfn>HTML</dfn> stands for HyperText Markup Language.</p>
+
+  <!-- Unordered list -->
+  <ul type="square">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <!-- Ordered list -->
+  <ol>
+    <li>First step</li>
+    <li>Second step</li>
+    <li>Third step</li>
+  </ol>
+
+  <!-- Big text -->
+  <p>This is a <big>slightly bigger</big> text.</p>
+
+  <!-- Marquee -->
+  <marquee direction="left" scrollamount="5" behavior="scroll" loop="2" bgcolor="#e0f7fa">
+    This is a scrolling marquee text!
+  </marquee>
+
+  <!-- Table example -->
+  <table>
+    <caption>Sample Table</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Karthik</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>Asha</td>
+        <td>22</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">End of Data</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Select with datalist and option groups -->
+  <label for="browser">Choose your browser: </label>
+  <input list="browsers" id="browser" name="browser">
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Safari">
+    <option value="Edge">
+  </datalist>
+
+  <br><br>
+
+  <label for="food">Select your food:</label>
+  <select id="food">
+    <optgroup label="Fruits">
+      <option>Apple</option>
+      <option>Mango</option>
+    </optgroup>
+    <optgroup label="Vegetables">
+      <option>Carrot</option>
+      <option>Spinach</option>
+    </optgroup>
+  </select>
+
+  <!-- Details and summary -->
+  <details>
+    <summary>Click here to know more</summary>
+    <p>This paragraph is revealed when the summary is clicked.</p>
+  </details>
+
+  <!-- Code inside pre -->
+  <pre>
+<code>
+function greet(name) {
+  return "Hello, " + name + "!";
 }
-    </pre>
+</code>
+  </pre>
 
-    <!-- Abbreviation, Citation, and Definition -->
-    <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard for webpages.</p>
-    <p><cite>The Ramayana</cite> is an epic poem.</p>
-    <p><dfn>Internet</dfn> is a global network of computers.</p>
-
-    <!-- Lists -->
-    <h3>Unordered List</h3>
-    <ul type="square">
-        <li>Item One</li>
-        <li>Item Two</li>
-    </ul>
-
-    <h3>Ordered List</h3>
-    <ol>
-        <li>First</li>
-        <li>Second</li>
-    </ol>
-
-    <!-- Form Input: Select, Option, Optgroup, Datalist -->
-    <h3>Choose your favorite fruit:</h3>
-    <select name="fruits">
-        <optgroup label="Citrus">
-            <option>Lemon</option>
-            <option>Orange</option>
-        </optgroup>
-        <optgroup label="Berries">
-            <option>Strawberry</option>
-            <option>Blueberry</option>
-        </optgroup>
-    </select>
-
-    <h3>Search Country (with datalist):</h3>
-    <input list="countries" name="country">
-    <datalist id="countries">
-        <option value="India">
-        <option value="USA">
-        <option value="Germany">
-    </datalist>
-
-    <!-- Div with attributes -->
-    <div id="main" class="container" style="color:blue;" title="Main container">
-        <p>This is content inside a div.</p>
-    </div>
+  <!-- div with attributes -->
+  <div id="info" class="highlight-box" style="margin-top:20px; padding:10px; border:1px solid gray;" title="Info Box">
+    This is a <b>div</b> element with ID, class, style, and title.
+  </div>
 
 </body>
 </html>
@@ -150,3 +237,7 @@ In HTML 5 there are semantic tags ( which give meaning to the tag) like,
 	</body>
 </html>
 
+audio, image, video tags:
+<audio src="path" controls> 
+<video src="path" controls>
+youtube or embedded videos or any content - <iframe src="path" width="" height="">

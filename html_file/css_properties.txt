@@ -1,3 +1,16 @@
+to insert the icons :
+paste this link in head using font awesome cdn - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+then go to font awesome than import the icons like <i class="fa-solid fa-user"></i>
+
+to insert image to title:
+<link rel="icon" href="link of the image">
+
+for animation on scroll:
+
+paste this link inside the head - <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+and write this inside the script - <script> AOS.init();</script>
+to animate particular section paste the link inside the tags - data-aos="fade-left"
+
 1. Text properties:
 
 color - applies color to the text
@@ -152,7 +165,6 @@ eg :
       background-image: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
       background-size: cover;
       background-repeat: no-repeat;
-
       font-family: Arial, sans-serif;
       color: #333;
     }

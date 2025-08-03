@@ -3,4 +3,187 @@ There are two methods to design the icons
 2.using canvas (we use js)
 
 SVG : 
+<svg> </svg> 
+rectangle - <rect x="10" y="10" width="100" height="50" fill="blue" stroke="black" stroke-width="2" />
+circle - <circle cx="80" cy="80" r="40" fill="red" stroke="black" stroke-width="2" />
+line - <line x1="10" y1="10" x2="200" y2="10" stroke="purple" stroke-width="4" />
+polygon - <polygon points="100,10 40,180 190,60 10,60 160,180" fill="orange" stroke="black" stroke-width="2" />
+polyline - <polyline points="0,40 40,40 40,80 80,80" fill="none" stroke="blue" stroke-width="2" />
+text - <text x="10" y="150" font-family="Verdana" font-size="20" fill="black">Hello SVG</text>
+
+eg : 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Shapes and Tags Example</title>
+</head>
+<body>
+
+  <h1>SVG Graphics - All Basic Shapes</h1>
+
+  <svg width="600" height="600" xmlns="http://www.w3.org/2000/svg" style="border:1px solid #ccc">
+
+    <!-- Rectangle -->
+    <rect x="20" y="20" width="100" height="50" fill="skyblue" stroke="black" stroke-width="2" />
+
+    <!-- Circle -->
+    <circle cx="180" cy="45" r="25" fill="red" stroke="black" stroke-width="2" />
+
+    <!-- Ellipse -->
+    <ellipse cx="280" cy="45" rx="40" ry="25" fill="green" stroke="black" stroke-width="2" />
+
+    <!-- Line -->
+    <line x1="20" y1="100" x2="200" y2="100" stroke="purple" stroke-width="3" />
+
+    <!-- Polygon -->
+    <polygon points="220,80 240,120 260,80 280,120 300,80" fill="orange" stroke="black" stroke-width="2" />
+
+    <!-- Polyline -->
+    <polyline points="320,80 340,120 360,80 380,120" fill="none" stroke="blue" stroke-width="2" />
+
+    <!-- Path (cubic and smooth curve) -->
+    <path d="M 20 160 C 70 100, 120 220, 170 160 S 270 220, 320 160" fill="none" stroke="brown" stroke-width="2" />
+
+    <!-- Text -->
+    <text x="20" y="250" font-family="Verdana" font-size="20" fill="black">Hello, SVG World!</text>
+
+    <!-- Gradient Definition -->
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:gold; stop-opacity:1" />
+        <stop offset="100%" style="stop-color:orangered; stop-opacity:1" />
+      </linearGradient>
+
+      <radialGradient id="grad2" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" style="stop-color:lightblue; stop-opacity:1" />
+        <stop offset="100%" style="stop-color:blue; stop-opacity:0.8" />
+      </radialGradient>
+    </defs>
+
+    <!-- Rectangle with Linear Gradient -->
+    <rect x="20" y="270" width="200" height="60" fill="url(#grad1)" />
+
+    <!-- Circle with Radial Gradient -->
+    <circle cx="300" cy="300" r="40" fill="url(#grad2)" />
+
+  </svg>
+
+</body>
+</html>
+
+
+Canvas :
+
+ <canvas  id="can" width="500" height="500" style="border: 1px solid black;"> 
+using js only we can draw inside the canvas
+
+inside the script - let d=document.getElementById("can").getContext("2d");
+
+eg :
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas - All Shapes</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    canvas { border: 1px solid black; }
+  </style>
+</head>
+<body>
+
+<h2>Canvas Shapes Demo</h2>
+<canvas id="myCanvas" width="800" height="500"></canvas>
+
+<script>
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // 1. Rectangle
+  ctx.fillStyle = "skyblue";
+  ctx.fillRect(20, 20, 120, 60); // x, y, width, height
+  ctx.strokeRect(20, 20, 120, 60);
+
+  // 2. Circle
+  ctx.beginPath();
+  ctx.arc(200, 50, 30, 0, 2 * Math.PI); // x, y, radius, start, end
+  ctx.fillStyle = "red";
+  ctx.fill();
+  ctx.stroke();
+
+  // 3. Ellipse
+  ctx.beginPath();
+  ctx.ellipse(300, 50, 60, 30, 0, 0, 2 * Math.PI); // cx, cy, rx, ry, rotation, start, end
+  ctx.fillStyle = "green";
+  ctx.fill();
+  ctx.stroke();
+
+  // 4. Line
+  ctx.beginPath();
+  ctx.moveTo(400, 20); // start point
+  ctx.lineTo(500, 80); // end point
+  ctx.strokeStyle = "purple";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  // 5. Triangle (polygon with 3 sides)
+  ctx.beginPath();
+  ctx.moveTo(550, 80);
+  ctx.lineTo(600, 20);
+  ctx.lineTo(650, 80);
+  ctx.closePath();
+  ctx.fillStyle = "orange";
+  ctx.fill();
+  ctx.stroke();
+
+  // 6. Polygon (5 sides - pentagon)
+  ctx.beginPath();
+  const centerX = 150, centerY = 200, sides = 5, radius = 50;
+  for (let i = 0; i <= sides; i++) {
+    let angle = (2 * Math.PI / sides) * i - Math.PI / 2;
+    let x = centerX + radius * Math.cos(angle);
+    let y = centerY + radius * Math.sin(angle);
+    if (i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.fillStyle = "violet";
+  ctx.fill();
+  ctx.stroke();
+
+  // 7. Polyline (open shape)
+  ctx.beginPath();
+  ctx.moveTo(250, 150);
+  ctx.lineTo(280, 180);
+  ctx.lineTo(310, 150);
+  ctx.lineTo(340, 180);
+  ctx.strokeStyle = "brown";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // 8. Quadratic Curve
+  ctx.beginPath();
+  ctx.moveTo(400, 150);
+  ctx.quadraticCurveTo(450, 100, 500, 150);
+  ctx.strokeStyle = "black";
+  ctx.stroke();
+
+  // 9. Bezier Curve
+  ctx.beginPath();
+  ctx.moveTo(550, 150);
+  ctx.bezierCurveTo(580, 100, 620, 200, 650, 150);
+  ctx.strokeStyle = "teal";
+  ctx.stroke();
+
+  // 10. Text
+  ctx.fillStyle = "black";
+  ctx.font = "20px Arial";
+  ctx.fillText("Canvas All Shapes", 20, 280);
+
+</script>
+
+</body>
+</html>
 
