@@ -11,6 +11,10 @@ paste this link inside the head - <link href="https://unpkg.com/aos@2.3.1/dist/a
 and write this inside the script - <script> AOS.init();</script>
 to animate particular section paste the link inside the tags - data-aos="fade-left"
 
+for animation on text or img:
+
+use transform in styles and if u want to delay the animation then use transition property to add the seconds.
+
 1. Text properties:
 
 color - applies color to the text
