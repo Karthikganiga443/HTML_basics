@@ -26,7 +26,8 @@ direction - sets text direction like from left to right or right to left
 text-overflow - defines how overflowed text is shown
 overflow-wrap or word-wrap - breaks long words to fit
 text-shadow - add shadows to text
-writing-mode - changes text writing directions like to vertical or horizontal 
+writing-mode - changes text writing directions like to vertical or horizontal
+-webkit-text-stroke: 1px red; // gives outline to the text 
 
 2. Font properties:
 

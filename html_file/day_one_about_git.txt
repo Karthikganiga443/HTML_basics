@@ -18,6 +18,5 @@ git add .
 git commit -u "msg"
 git push -u origin master	
 
-to get or access the project or cloning the project
-
+to get or access the project or cloning the projects
 git clone https://github.com/Karthikganiga443/test-camera.git
