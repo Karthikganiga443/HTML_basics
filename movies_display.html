@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            background-color: azure;
+            padding:50px;
+        }
+        .container .card{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 515px;
+            width: 315px;
+            /* border: 1px solid black; */
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0px 0px 20px gray;
+            transition: 1s;
+        }
+        .container .card:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .container .card .outsec{
+            height:510px;
+            width: 310px;
+            border-radius: 30px;
+            animation: anim 3s linear infinite ;
+            position: absolute;
+        }
+        .container .sec1{
+            width:300px;
+            height: 500px;
+        }
+        .container .card .sec1{
+            /* border:2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px;
+            border-radius: 25px;
+            background-color: darkgray;
+            z-index: 1;
+        }
+        .container img{
+            width: 250px;
+            height:250px;
+            border-radius: 10px;
+        }
+        .container .card .sec1 h1, p{
+            margin:10px
+        }
+        .container .card button{
+            padding:10px;
+            margin:10px;
+            width: 200px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        @keyframes anim {
+            0%{
+                transform: rotate(-360deg)scale(2);
+            }
+            100%{
+                transform: rotate(360deg)scale(2);
+            }
+        }
+        .container .card:nth-child(1) .outsec{
+             background: conic-gradient(orange,transparent,transparent,transparent,transparent,transparent,transparent,orange,transparent,transparent,transparent,transparent,transparent,transparent);
+        }
+        .container .card:nth-child(2) .outsec{
+            background: conic-gradient(rgb(255, 0, 0),transparent,transparent,transparent,transparent,transparent,transparent,rgb(255, 0, 0),transparent,transparent,transparent,transparent,transparent,transparent);
+        }
+        .container .card:nth-child(3) .outsec{
+            background: conic-gradient(rgb(21, 0, 255),transparent,transparent,transparent,transparent,transparent,transparent,rgb(21, 0, 255),transparent,transparent,transparent,transparent,transparent,transparent);
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="card">
+           <div class="outsec">
+           </div>
+           <div class="sec1">
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRBac-4dlHEaK62vvEHMMcS_PboGclwBP3Bny_k530Z_s2xoSFXFM0r_EgoPXBO5DVLT8Mr" alt="kgf">
+                <h1>K.G.F: Chapter 1</h1>
+                <p>Rocky, a young man, seeks power and wealth in order to fulfil a promise to his dying mother. His quest takes him to Mumbai, where he becomes involved with the notorious gold mafia.</p>
+                <button>Know More!</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="outsec">
+
+            </div>
+            <div class="sec1">
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg" alt="kgf2">
+                <h1>K.G.F: Chapter 2</h1>
+                <p>KGF: Chapter 2 is a 2022 Indian Kannada-language period action film[21] written and directed by Prashanth Neel, and produced by Vijay Kiragandur under his Hombale Films banner. </p>
+                <button>Know More!</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="outsec"></div>
+            <div class="sec1">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTDgyDnfVJacIKmAHA0UJhfaZJU0WgzuLXrL3dcXihbIOYmDrTI" alt="sufromso">
+                <h1>Su From So</h1>
+                <p>In a quiet village, a boy's innocent crush unleashes strange events that have everyone convinced he's brought a ghost along with his feelings.</p>
+                <button>Know More!</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
