@@ -185,4 +185,5 @@ eg :
 </body>
 </html>
 
-5. 
+5. for images: if we want to display the shadows for the edge we need to use filter
+ filter:drop-shadow(0px 0px 10px red)
