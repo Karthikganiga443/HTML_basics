@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(darkgray, darkgray, rgb(1,238,254));
+    background-attachment: fixed;
+    
+}
+
+/* Section container */
+.sec {
+    border: 0px solid #fff;
+    margin: 5%;
+    background-color: black;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px black;
+}
+
+/* Navbar */
+.sec .sec-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    background-color: rgb(1,238,254);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgb(1,238,254);
+    padding: 0.5rem;
+    position: sticky;
+    top: 0%;
+}
+
+.sec-nav a {
+    font-size: clamp(0.8rem, 2vw, 1rem); /* auto scales */
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.sec-nav a:hover {
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Section content layout */
+.sec2 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap; /* stack on small screens */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Text content */
+.sec11 {
+    flex: 1 1 300px; /* minimum 300px, then grows */
+    border: 0px solid white;
+    padding: 1rem;
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.sec11 h1, 
+.sec11 p, 
+.sec11 h3 {
+    margin: 1.5rem 0;
+}
+.sec11 .java {
+    display: inline-block;       
+    white-space: nowrap;         
+    overflow: hidden;             
+    border-right: 2px solid #00e5ff; 
+    animation: typing 3s steps(26) 1s forwards ,
+               blink 0.7s step-end infinite;    
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 23ch } 
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+.sec11 a {
+    color: rgb(1,238,254);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0px 0px 10px gray;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.sec11 a:hover {
+    background-color: rgb(1,238,254);
+    color: white;
+    box-shadow: 0px 0px 10px rgb(1,238,254);
+}
+
+.sec11 button {
+    background-color: rgb(1,238,254);
+    width: 100%; /* full width on all screens */
+    max-width: 20rem; /* limit for desktops */
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 3rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    letter-spacing: 1px;
+    border: none;
+}
+
+.sec11 button:hover {
+    box-shadow: 0px 0px 10px rgb(1,238,254);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+/* Side section */
+.sec12 {
+    flex: 1 1 250px; /* responsive size */
+}
