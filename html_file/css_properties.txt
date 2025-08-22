@@ -19,9 +19,9 @@ use transform in styles and if u want to delay the animation then use transition
 
 color - applies color to the text
 text-align - left, center, right
-text-decoration - adds decoration to the text
+text-decoration - underline solid red //adds decoration to the text
 text transform - controls capitalization
-text-indent - indents the first line of the text
+text-indent - 10px //indents the first line of the text
 letter-spacing - adds spaces b/w the letters
 word-spacing - adds spaces b/w the words
 line-height - sets the height b/w the lines or text
@@ -30,8 +30,10 @@ direction - sets text direction like from left to right or right to left
 text-overflow - defines how overflowed text is shown
 overflow-wrap or word-wrap - breaks long words to fit
 text-shadow - add shadows to text
-writing-mode - changes text writing directions like to vertical or horizontal
+writing-mode - vertical lr //changes text writing directions like to vertical or horizontal
 -webkit-text-stroke: 1px red; // gives outline to the text 
+text-orientation - upright //orientation 
+
 
 2. Font properties:
 
@@ -187,3 +189,7 @@ eg :
 
 5. for images: if we want to display the shadows for the edge we need to use filter
  filter:drop-shadow(0px 0px 10px red)
+
+6. whitespace : nowrap to fit the content in the position
+
+7. overflow : hidden or auto or scroll or ellipse // to display or hide the content
