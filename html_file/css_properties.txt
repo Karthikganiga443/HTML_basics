@@ -193,3 +193,13 @@ eg :
 6. whitespace : nowrap to fit the content in the position
 
 7. overflow : hidden or auto or scroll or ellipse // to display or hide the content
+
+8. underline properties:
+	underline-offset: to move the underline below the words for some amount.
+
+9. Display properties:
+
+	display: flex, block, inline-block, inline-flex, none
+
+
+	
