@@ -15,7 +15,7 @@ git push -u origin master
 updating the existing repo:
 
 git add .
-git commit -u "msg"
+git commit -m "msg"
 git push -u origin master	
 
 to get or access the project or cloning the projects
