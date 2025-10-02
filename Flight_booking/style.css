@@ -1,0 +1,9 @@
+body{
+    background: linear-gradient(45deg,rgba(255, 0, 0, 0.181),rgba(255, 0, 0, 0.422)),url(https://www.savethestudent.org/uploads/flights.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+form{
+    background-color: transparent !important;
+    background:linear-gradient(rgba(51, 12, 12, 0.671));
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIR INDIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style1.css">
+    
+     
+</head>
+
+<body class="bg-primary">
+    <h1 class="display-1 text-danger fw-bolder text-center text-shadow ">AIR INDIA</h1>
+    <h4 class="text-center text-white mb-4">Welcome <span id="user_name"></span></h4>
+    <section class="container my-5 p-4 background rounded shadow" id="fulldata">
+
+
+        <form>
+            <div class="row">
+                <div class="col-12 col-md-6 text-white">
+                    <h5>Passenger Details</h5>
+                    <div class="row">
+                        <div class="form-group mt-3 col-12 col-md-6">
+                            <label class="form-label">First/Given Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fname">
+                        </div>
+                        <div class="form-group mt-3 col-12 col-md-6">
+                            <label class="form-label">Last/Surname <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="lname">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="phonenumber">
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="form-label">Date of Birth <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="birthdate">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label class="form-label">Gender <span class="text-danger">*</span></label>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input type="radio" name="gender" value="male" class="form-check-input" id="male">
+                                <label for="male" class="form-check-label">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="gender" value="female" class="form-check-input" id="female">
+                                <label for="female" class="form-check-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 text-white">
+                    <h5>Travel Details</h5>
+
+
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <label class="form-label">From Origin To Destination <span
+                                    class="text-danger">*</span></label>
+                            <select class="form-control" id="flightrupees">
+                                <option value="0">Choose a flight</option>
+                                <option value="Delhi → Mumbai-4500">(one way) Delhi → Mumbai - &#8377; 4500</option>
+                                <option value="Delhi <-> Mumbai-9000">(round trip) Delhi <-> Mumbai - &#8377; 9000
+                                </option>
+                                <option value="Delhi → Bengaluru-5200">(one way) Delhi → Bengaluru - &#8377; 5200
+                                </option>
+                                <option value="Delhi <-> Bengaluru-10400">(round trip) Delhi <-> Bengaluru - &#8377;
+                                        10400</option>
+                                <option value="Delhi → Kolkata-4800">(one way) Delhi → Kolkata - &#8377; 4800</option>
+                                <option value="Delhi <-> Kolkata-9600">(round trip) Delhi <-> Kolkata - &#8377; 9600
+                                </option>
+                                <option value="Delhi → Hyderabad-4700">(one way) Delhi → Hyderabad - &#8377; 4700
+                                </option>
+                                <option value="Delhi <-> Hyderabad-9400">(round trip) Delhi <-> Hyderabad - &#8377; 9400
+                                </option>
+                                <option value="Mumbai → Bengaluru-3500">(one way) Mumbai → Bengaluru - &#8377; 3500
+                                </option>
+                                <option value="Mumbai <-> Bengaluru-7000">(round trip) Mumbai <-> Bengaluru - &#8377;
+                                        7000</option>
+                                <option value="Mumbai → Kolkata-4000">(one way) Mumbai → Kolkata - &#8377; 4000</option>
+                                <option value="Mumbai <-> Kolkata-8000">(round trip) Mumbai <-> Kolkata - &#8377; 8000
+                                </option>
+                                <option value="Bengaluru → Delhi-5200">(one way) Bengaluru → Delhi - &#8377; 5200
+                                </option>
+                                <option value="Bengaluru <-> Delhi-10400">(round trip) Bengaluru <-> Delhi - &#8377;
+                                        10400</option>
+                                <option value="Bengaluru → Mumbai-3600">(one way) Bengaluru → Mumbai - &#8377; 3600
+                                </option>
+                                <option value="Bengaluru <-> Mumbai-7200">(round trip) Bengaluru <-> Mumbai - &#8377;
+                                        7200</option>
+                                <option value="Kolkata → Hyderabad-4300">(one way) Kolkata → Hyderabad - &#8377; 4300
+                                </option>
+                                <option value="Kolkata <-> Hyderabad-8600">(round trip) Kolkata <-> Hyderabad - &#8377;
+                                        8600</option>
+                                <option value="Hyderabad → Mumbai-3900">(one way) Hyderabad → Mumbai - &#8377; 3900
+                                </option>
+                                <option value="Hyderabad <-> Mumbai-7800">(round trip) Hyderabad <-> Mumbai - &#8377;
+                                        7800</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label class="form-label">Departure Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="dept_date">
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <label class="form-label">Select Food Item <span class="text-danger">*</span></label>
+                        <select class="form-control" id="foodrupees">
+                            <option value="0">Choose a food item</option>
+                            <option value="Veg Meal-200">Veg Meal - &#8377; 200</option>
+                            <option value="Non-Veg Meal-250">Non-Veg Meal - &#8377; 250</option>
+                            <option value="Vegan Meal-300">Vegan Meal - &#8377; 300</option>
+                            <option value="Sandwich-150">Sandwich - &#8377; 150</option>
+                            <option value="Fruit Pack-100">Fruit Pack - &#8377; 100</option>
+                            <option value="Juice-50">Juice - &#8377; 50</option>
+                            <option value="Snack Pack-120">Snack Pack - &#8377; 120</option>
+                            <option value="Premium Meal-400">Premium Meal - &#8377; 400</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="text-center mt-3">
+            <button class="btn btn-outline-success" onclick="Preview()">Preview</button>
+        </div>
+        
+         
+       
+
+    </section>
+</body>
+<script src="./script.js" defer></script>
+<script src="./script1.js" defer></script>
+</html>

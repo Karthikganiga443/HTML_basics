@@ -1,0 +1,11 @@
+body{
+    background: linear-gradient(45deg,rgba(79, 9, 9, 0.745),rgba(69, 18, 18, 0.745)),url(https://images.ctfassets.net/pdf29us7flmy/5ExZrNddyjKlFVC4oJWpci/d52b2225f0bf3342779a965ea6907c2e/airplane-runway-vertical.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+.text-shadow{
+    text-shadow: 5px 5px 5px red;
+}
+.background{
+    background-color: rgba(0, 0, 0, 0.197);
+}

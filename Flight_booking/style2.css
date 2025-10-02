@@ -1,0 +1,53 @@
+
+.moved{
+    transform: translateY(-200%);
+}
+h5{
+    margin-top: 25px;
+}
+#payment {
+    overflow: visible;
+    margin: 3rem auto;
+    border: none;
+    width: 90%;
+    max-width: 400px;
+    height:23rem;
+    text-align: center;
+    border-radius: 2rem;
+    background: white;
+    padding: 2rem;
+}
+
+#payment img {
+    border: 0.5rem solid white;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translateY(-50%);
+    object-fit: cover;
+}
+
+#payment .pay{
+    transform: translateY(-40%);
+    color: black !important;
+    font-size: 1.2rem;
+}
+
+#payment h1 {
+    color: rgb(1, 247, 1);
+    margin: 1rem 0;
+}
+
+#payment p {
+    margin-bottom: 1.5rem;
+}
+
+#payment button {
+    margin-top: 1rem;
+    width: 60%;
+    max-width: 180px;
+    padding: 0.75rem;
+    background-color: rgb(1, 247, 1);
+    border-radius: 1rem;
+    font-size: 1rem;
+}
