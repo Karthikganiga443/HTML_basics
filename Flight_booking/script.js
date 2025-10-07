@@ -5,7 +5,8 @@ function sendOTP() {
             emailjs.init("hqutN46OkHSt0Q_Da");
         })();
     var UserName = document.getElementById("username").value;
-    if (!UserName || !UserName.includes('@')) {
+    const emailPattren = /^[a-z0-9._+-]+@[a-z]+\.[a-z]{3}$/;
+    if (emailPattren.test(UserName)==false) {
         alert("Enter Valid Username");
         return
     }
