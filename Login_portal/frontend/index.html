@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .login-card {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .btn-group-flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        @media (max-width: 576px) {
+            .btn-group-flex {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="login-card">
+            <h2 class="text-center mb-4 font-monospace">LOGIN</h2>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                    <div class="text-end mt-1">
+                        <button class="btn btn-link p-0" type="button" onclick="window.location.href='./Password_Reset_.html'">Forgot Password?</button>
+                    </div>
+                </div>
+
+                <div class="btn-group-flex mt-3">
+                    <button class="btn btn-outline-danger flex-grow-1" type="reset">Cancel</button>
+                    <button class="btn btn-outline-success flex-grow-1" type="submit">Login</button>
+                </div>
+            </form>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+                <button class="btn btn-outline-primary w-100" type="button" onclick="window.location.href='./createAccount.html'">Create Account</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", loginUser);
+
+        async function loginUser(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("floatingInput").value;
+            const password = document.getElementById("floatingPassword").value;
+
+            try {
+                const res = await axios.post("http://localhost:4000/existing/user/login", {
+                    Email: email,
+                    Password: password
+                });
+                alert(res.data.message);
+                console.log(res);
+            } catch (error) {
+                alert(error.response?.data?.message || error.message);
+            }
+        }
+    </script>
+</body>
+
+</html>
